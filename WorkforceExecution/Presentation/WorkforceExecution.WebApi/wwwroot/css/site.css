@@ -1,0 +1,21 @@
+:root {
+  --wx-primary: #1b4965;
+  --wx-accent: #5fa8d3;
+  --wx-bg: #f4f7fa;
+}
+body { background: var(--wx-bg); min-height: 100vh; }
+.navbar-wx { background: var(--wx-primary); }
+.navbar-wx .nav-link, .navbar-wx .navbar-brand { color: #fff; }
+.navbar-wx .nav-link.active { color: #fff; font-weight: 600; border-bottom: 2px solid var(--wx-accent); }
+.navbar-wx .nav-link:hover { color: #cae9ff; }
+.card { border: none; box-shadow: 0 1px 4px rgba(0,0,0,.08); border-radius: .75rem; }
+.kpi-card h3 { font-size: 1.9rem; font-weight: 700; margin-bottom: 0; color: var(--wx-primary); }
+.kpi-card small { color: #6c757d; text-transform: uppercase; letter-spacing: .5px; font-size: .7rem; }
+.login-bg {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, var(--wx-primary), var(--wx-accent));
+}
+.table thead th { background: #eef4f8; font-size: .8rem; text-transform: uppercase; letter-spacing: .3px; }
+.table td { vertical-align: middle; font-size: .9rem; }
+.badge-status { font-size: .72rem; }
+.toast-container { z-index: 2000; }

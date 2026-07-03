@@ -75,7 +75,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-var app = builder.Build();  
+var app = builder.Build();
 
 // Veritabanini olustur ve WBS_V3 verisiyle seed'le
 using (var scope = app.Services.CreateScope())

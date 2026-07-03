@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Günlük Plan";
+}
+<div class="container-fluid px-4">
+    <div class="card p-3 mb-4">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Daily Plan Oluştur <span class="text-muted small">(T-1)</span></h5>
+            <div class="d-flex gap-2">
+                <input type="date" id="planDate" class="form-control form-control-sm" style="width:auto">
+                <button class="btn btn-sm btn-outline-primary" onclick="addRow()">+ Satır Ekle</button>
+                <button class="btn btn-sm btn-success" onclick="submitPlan()">Planı Gönder</button>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>KKK</th><th>Project</th><th>ToW</th><th>SToW</th><th>SSToW</th>
+                        <th>Unit</th><th>Quantity</th><th>Man Day</th><th></th>
+                    </tr>
+                </thead>
+                <tbody id="planRows"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="card p-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Gönderdiğim Planlar</h5>
+            <input type="date" id="listDate" class="form-control form-control-sm" style="width:auto" onchange="loadMine()">
+        </div>
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr><th>KKK</th><th>Project</th><th>SSToW</th><th>Plan Qty</th><th>Plan MD</th>
+                        <th>Fact Qty</th><th>Fact MD</th><th>HoM</th><th>Durum</th></tr>
+                </thead>
+                <tbody id="mineRows"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/plan.js"></script>
+}
