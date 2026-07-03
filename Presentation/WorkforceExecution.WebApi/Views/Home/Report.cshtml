@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Daily Report";
+}
+<div class="container-fluid px-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="mb-0">Daily Report <span class="text-muted small">— onaylanan kayıtların konsolidasyonu (canlı)</span></h5>
+        <input type="date" id="listDate" class="form-control form-control-sm" style="width:auto" onchange="loadReport()">
+    </div>
+
+    <div class="row g-3 mb-4" id="kpiCards"></div>
+
+    <div class="card p-3">
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr><th>KKK</th><th>Project</th><th>ToW/SToW/SSToW</th><th>Type of Code</th>
+                        <th>Plan Qty</th><th>Fact Qty</th><th>Plan MD</th><th>Fact MD</th>
+                        <th>OT</th><th>Verim %</th><th>Crew</th><th>ZZZ</th></tr>
+                </thead>
+                <tbody id="rows"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/report.js"></script>
+}

@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Onay Kuyruğu";
+}
+<div class="container-fluid px-4">
+    <div class="card p-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h5 class="mb-0">Onayımı Bekleyen Kayıtlar</h5>
+            <input type="date" id="listDate" class="form-control form-control-sm" style="width:auto" onchange="loadApprovals()">
+        </div>
+        <div class="table-responsive">
+            <table class="table table-sm">
+                <thead>
+                    <tr><th>KKK</th><th>Project</th><th>İş</th><th>Plan Qty / MD</th><th>Fact Qty / MD</th>
+                        <th>Verim %</th><th>Crew</th><th>Comment</th><th>Onay Geçmişi</th><th>Aksiyon</th></tr>
+                </thead>
+                <tbody id="rows"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/approvals.js"></script>
+}
