@@ -26,7 +26,7 @@ public class ApproveWorkItemCommandHandler : IRequestHandler<ApproveWorkItemComm
         _workItems = workItems;
         _users = users;
         _notifications = notifications;
-    }
+    }   
 
     public async Task<Result<WorkItemDto>> Handle(ApproveWorkItemCommand request, CancellationToken ct)
     {
