@@ -16,7 +16,7 @@ public class DailyPlansController : ControllerBase
 
     public DailyPlansController(IMediator mediator) => _mediator = mediator;
 
-    // T-1: Teknik Ofis gunluk plan olusturur.
+    // T-1: Teknik Ofis gunluk plan olusturur..
     [HttpPost]
     [Authorize(Roles = "TechOffice")]
     public async Task<IActionResult> Create([FromBody] CreateDailyPlanCommand command)
